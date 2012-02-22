@@ -1,0 +1,36 @@
+<%= javascript_include_tag "uploadify/swfobject.js", "uploadify/jquery.uploadify.v2.1.4.js" %>
+<script type="text/css" herf="stylsheet/uploadify"/>
+
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function() {
+$('#upload_photo').click(function(event){
+event.preventDefault();
+});
+$('#upload_photo').uploadify({'uploader' : '/javascripts/uploadify/uploadify.swf','script': '/uploads/create','multi': true,'cancelImg': '/images cancel.png' });
+$('#upload_submit').click(function(event){
+event.preventDefault();
+$('#upload_photo').uploadifyUpload();
+});
+});
+</script>
+
+
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function() {
+$('#upload_photo').click(function(event){
+event.preventDefault();
+});
+
+$('#upload_photo').uploadify({
+'uploader'        : '/javascripts/uploadify/uploadify.swf',
+'script'          : '/uploads/create',
+'multi'            : true,
+'cancelImg'        : '/images/cancel.png'
+});
+
+$('#upload_submit').click(function(event){
+event.preventDefault();
+$('#upload_photo').uploadifyUpload();
+});
+});
+

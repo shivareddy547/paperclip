@@ -1,0 +1,9 @@
+<% title "New Upload" %>
+
+<%= render 'form' %>
+
+<div class="upload">
+<%= image_tag upload.photo.url %>
+</div>
+
+<p><%= link_to "Back to List", uploads_path %></p>
